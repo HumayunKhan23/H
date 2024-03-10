@@ -123,6 +123,6 @@ workers19_21 <- PUMS19_21[PUMS19_21$COW != '0' &
 #Creates a binary variable with 1 for people that work from home and 0 for those who don't
 workers19_21$WFH <- ifelse(PUMS19_21$JWTRNS == '11', 1, 0)
 
-#tappy function gives mean WFH rate by state
+#tapply function gives mean WFH rate by state
 means_by_value <- tapply(Pums19$WFH, Pums19$ST, mean)
 means_by_value
